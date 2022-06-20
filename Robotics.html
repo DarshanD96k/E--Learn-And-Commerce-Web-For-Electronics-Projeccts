@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DD Electronics/Robotics</title>
+    <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async />
+    <link rel="dns-prefetch" href="https://clients1.google.com">
+    <link rel="dns-prefetch" href="https://static.javatpoint.com">
+    <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://feedify.net">
+    <meta name="theme-color" content="#4CAF50" />
+    <meta property="og:title" content="Learn Robotics Tutorial - javatpoint" />
+    <meta property="og:description"
+        content="Learn Robotics tutorial for beginners and professionals with components, locomotion, artificial intelligence, sensors, hardware designing, power supply, microcontroler, lcd, pcb etc." />
+    <meta name="keywords"
+        content="robotics, tutorial, beginners, professionals, introduction, example, components, locomotion, artificial intelligence, sensors, hardware designing, power supply, microcontroler, lcd, pcb" />
+    <meta name="description"
+        content="Learn Robotics tutorial for beginners and professionals with components, locomotion, artificial intelligence, sensors, hardware designing, power supply, microcontroler, lcd, pcb etc." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="canonical" href="https://www.javatpoint.com/robotics-tutorial" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:title" property="og:title" content="Learn Robotics Tutorial - javatpoint" />
+    <meta name="twitter:description" property="og:description"
+        content="Learn Robotics tutorial for beginners and professionals with components, locomotion, artificial intelligence, sensors, hardware designing, power supply, microcontroler, lcd, pcb etc." />
+    <meta property="og:url" content="https://www.javatpoint.com/robotics-tutorial" />
+    <meta property="og:site_name" content="www.javatpoint.com" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@pagejavatpoint" />
+    <meta name="twitter:domain" content="www.javatpoint.com" />
+    <meta name="twitter:creator" content="@pagejavatpoint" />
+    <link href="https://www.javatpoint.com/manifest.json" rel="manifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script data-cfasync="false"
+        type="text/javascript">(function (w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+
+    <script data-cfasync="false" type="text/javascript">
+        (function (w, d) {
+            var siteId = "37780";
+            var targetElement =
+                d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+            var s = d.createElement("script");
+            s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+            s.crossOrigin = "anonymous";
+            s.type = "text/javascript";
+            s.async = true;
+            targetElement.appendChild(s);
+            function sendErrorLog(log) {
+                var eventName = "script_error";
+                log.siteId = siteId;
+                var data = btoa(JSON.stringify(log));
+                var img = document.createElement("img");
+                img.src =
+                    "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+            }
+            var searchParams =
+                typeof URLSearchParams === "function" &&
+                new URLSearchParams(window.location.search);
+            if (searchParams) {
+                var isDebugModeOn = searchParams.has("apDebug");
+            }
+            w.addEventListener("error", function (event) {
+                try {
+                    var filename = event.filename || "";
+                    if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+                        return;
+                    }
+                    var error = event.error;
+                    if (error) {
+                        var message = error.message;
+                        var stack = error.stack;
+                    }
+                    message = message || event.message;
+                    var log = {
+                        message: message,
+                        stack: stack || "",
+                        timestamp: Math.floor(event.timeStamp),
+                        type: "uncaughterror",
+                    };
+                    sendErrorLog(log);
+                    !isDebugModeOn && event.preventDefault();
+                } catch (error) { }
+            });
+            w.addEventListener("unhandledrejection", function (event) {
+                var reason = event.reason;
+                if (typeof reason === "object") reason = JSON.stringify(reason);
+                var log = {
+                    message: reason || "no reason found",
+                    timestamp: Math.floor(event.timeStamp),
+                    type: "unhandledrejection",
+                };
+                sendErrorLog(log);
+                !isDebugModeOn && event.preventDefault();
+            });
+            var ga = d.createElement("script");
+            ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+            ga.type = "text/javascript";
+            ga.async = true;
+            targetElement.appendChild(ga);
+            w.dataLayer = window.dataLayer || [];
+            w.gtag = function () {
+                window.dataLayer.push(arguments);
+            };
+            w.gtag("js", new Date());
+            w.gtag("config", "G-Z0TZ7TDHS1", {
+                custom_map: { dimension1: "siteid" },
+            });
+            w.gtag("event", "script-call", {
+                send_to: "G-Z0TZ7TDHS1",
+                siteid: siteId,
+            });
+            s.onerror = function (msg) {
+                w.gtag("event", "ad-block", {
+                    send_to: "G-Z0TZ7TDHS1",
+                    siteid: siteId,
+                });
+            };
+        })(window, document);
+    </script>
+</head>
+
+
+
+<body>
+    <nav class="white">
+
+        <center> <a href="#!"
+                style="border:5px; border-style:groove;border-color:black; font-size:25px;color:blue"><span
+                    style="background-color: rgb(0, 119, 255);padding:5px;color:white;border-right:5px; border-right-style:groove;border-right-color:rgb(253, 0, 0); ">DD</span>
+                Electronics </a></center>
+    </nav>
+
+    <nav class="#e65100 blue darken-4">
+        <div class="nav-wrapper">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+
+
+
+            <!--nav>
+    <div class="nav-wrapper">
+      <ul class="left hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li class="active"><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+
+
+                    <li><a class="active" href="home.html">Home</a></li>
+                    <li><a href="E-components.html">E-components</a></li>
+
+                    <li><a href="sensors.html">Sensors-module</a></li>
+
+                    <li><a href="Robotics.html">Robotics</a></li>
+                    <li><a href="ProjectDoc.html">Project Doc</a></li>
+                    <li><a href="carrousal.html">Tutorials</a></li>
+                    <!-- <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="social.html">Social Media</a></li>
+                    <li><a href="hindi.html">Hindi </a></li> -->
+                    <ul class="right hide-on-med-and-down" style="margin-right:50px ;">
+
+
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo" style="background-color: rgb(20, 130, 219) ;">
+
+
+
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="E-components.html">E-components</a></li>
+
+        <li><a href="sensors.html">sensors-module</a></li>
+
+        <li><a href="Robotics.html">Robotics</a></li>
+        <li><a href="ProjectDoc.html">Project Doc</a></li>
+        <hr>
+        <ul>
+            <li><a class="active" href="buisness.html">Buisness-Collaboration</a>
+                <a href="contact.html">Contact us</a>
+            </li>
+            <li><a href="notification.html">Notifications</a>
+                <a href="https://instagram.com/bcci_.tvutm_medium=copy_link">Instagram</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/CricRiffle?t=H00e4HngSgY-Rdqo1HJ-Iw&s=08">Twitter</a>
+            </li>
+            <li><a href="#test4">Telegram 4</a></li>
+
+            <hr>
+
+
+        </ul>
+
+
+
+        <div class="sidenav-row-2" style="background-color: white; width:fit-content">
+            <ul style="justify-content: center;align-items:flex-start;display:flex;">
+                <li>
+
+                </li>
+            </ul>
+
+        </div>
+    </ul>
+
+
+
+
+
+    <!-- 
+            <div class="mobilemenu" style="clear:both">
+
+                <ins class="adPushupAds" data-adpControl="hqdgs" data-ver="2" data-siteId="37780"
+                    data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+                <script data-cfasync="false"
+                    type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]) { if (k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1"); } } })(window, document);</script>
+            </div> -->
+    <div id="menu">
+        <div class="leftmenu2">
+            <h2 class="spanh2"><span class="spanh2">Robotics Tutorial</span></h2>
+        </div>
+        <div class="leftmenu">
+            <a href="robotics-tutorial">Introduction to Robotics</a>
+            <a href="what-is-robotics" class="l1">What is Robotics</a>
+            <a href="robotics-history" class="l1">Robotics History</a>
+            <a href="components-of-robot" class="l1">Components of Robot</a>
+            <a href="robot-locomotion" class="l1">Robot Locomotion</a>
+            <a href="artificial-intelligence-in-robotics" class="l1">AI in Robotics</a>
+            <a href="artificial-intelligence-research-areas" class="l1">AI Research Areas</a>
+            <a href="types-of-robot" class="l1">Types of Robot</a>
+            <a href="types-of-robot-sensors" class="l1">Types of Robot Sensors</a>
+            <a href="robotics-hardware-designing" class="l1">Hardware Designing</a>
+            <a href="robotics-power-supply" class="l1">Power Supply</a>
+            <a href="robotics-microcontroler" class="l1">MicroController</a>
+            <a href="robotics-liquid-crystal-display" class="l1">Liquid Crystal Display </a>
+            <a href="robotics-designing-of-pcb" class="l1">Designing of PCB</a>
+        </div>
+        <div class="leftmenu2">
+            <h2 class="spanh2"><span class="spanh2">Robotics Projects</span></h2>
+        </div>
+        <div class="leftmenu">
+            <a href="obstacle-avoider-robot">Obstacle Avoider Robot</a>
+            <a href="line-follower-robot">Line Follower Robot</a>
+            <a href="hand-gesture-controlled-robot">HGS Robot</a>
+            <a href="dtmf-based-mobile-controlled-robot">DTMF Controlled Robot</a>
+        </div>
+        <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint" />
+        <br />
+        <div id="leftad" style="margin-left:20px">
+
+            <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad">
+                <script>
+                    var adpushup = window.adpushup = window.adpushup || {};
+                    adpushup.que = adpushup.que || [];
+                    adpushup.que.push(function () {
+                        adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="onlycontent">
+
+        <div class="onlycontentad">
+            <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad">
+                <script>
+                    var adpushup = window.adpushup = window.adpushup || {};
+                    adpushup.que = adpushup.que || [];
+                    adpushup.que.push(function () {
+                        adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="onlycontentinner">
+            <div id="city">
+                <table>
+                    <tr>
+                        <td>
+                            <div id="bottomnextup">
+                                <a class="next" href="what-is-robotics">next &rarr;</a>
+                            </div>
+                            <h1 class="h1">Robotics Tutorial</h1>
+                            <img src="https://static.javatpoint.com/robotics/images/robotics150.jpg"
+                                alt="Robotics Tutorial" style="float:right;padding:10px" />
+                            <p>Robotics tutorial provides basic and advanced concepts of Robotics. Our Robotics
+                                tutorial is designed for beginners and professionals.</p>
+                            <p>Robotics is a multi functional, re-programmable, automatic industrial machine.
+                            </p>
+                            <p>Our Robotics tutorial includes all topics of Robotics such as components,
+                                locomotion, artificial intelligence, sensors, hardware designing, power supply,
+                                microcontroller, Liquid Crystal Display, PCB etc.</p>
+                            <p>In this tutorial, you will be able to understand the robotics tutorial better by
+                                robotics projects: Obstacle Avoider Robot, Line Follower Robot, Hand Gesture
+                                Controlled Robot and DTMF based Controlled Robot.</p>
+                            <hr />
+                            <h2 class="h2 center textshadow">Robotics Index</h2>
+                            <hr />
+                            <div class="responsivediv">
+                                <div class="col-2">
+                                    <p><strong>Robotics Tutorial</strong></p>
+                                    <ul class="points">
+                                        <li><a href="robotics-tutorial">Introduction to Robotics</a></li>
+                                        <li><a href="what-is-robotics">What is Robotics</a></li>
+                                        <li><a href="robotics-history">Robotics History</a></li>
+                                        <li><a href="components-of-robot">Components of Robot</a></li>
+                                        <li><a href="robot-locomotion">Robot Locomotion</a></li>
+                                        <li><a href="artificial-intelligence-in-robotics">AI in Robotics</a>
+                                        </li>
+                                        <li><a href="artificial-intelligence-research-areas">AI Research
+                                                Areas</a></li>
+                                        <li><a href="types-of-robot">Types of Robot</a></li>
+                                        <li><a href="types-of-robot-sensors">Types of Robot Sensors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <ul class="points">
+                                        <li><a href="robotics-hardware-designing">Hardware Designing</a></li>
+                                        <li><a href="robotics-power-supply">Power Supply</a></li>
+                                        <li><a href="robotics-microcontroler">MicroController</a></li>
+                                        <li><a href="robotics-liquid-crystal-display">Liquid Crystal Display</a>
+                                        </li>
+                                        <li><a href="robotics-designing-of-pcb">Designing of PCB</a></li>
+                                    </ul>
+                                    <p><strong>Robotics Projects</strong></p>
+                                    <ul class="points">
+                                        <li><a href="obstacle-avoider-robot">Obstacle Avoider Robot</a></li>
+                                        <li><a href="line-follower-robot">Line Follower Robot</a></li>
+                                        <li><a href="hand-gesture-controlled-robot">HGS Robot</a></li>
+                                        <li><a href="dtmf-based-mobile-controlled-robot">DTMF Controlled
+                                                Robot</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr />
+                            <h2 class="h2">Prerequisite</h2>
+                            <p>Before learning Robotics, you must have the basic knowledge of Computer
+                                Architecture and Embedded System.</p>
+                            <h2 class="h2">Audience</h2>
+                            <p>Our Robotics tutorial is designed to help beginners and professionals.</p>
+                            <h2 class="h2">Problem</h2>
+                            <p>We assure that you will not find any problem in this Robotics tutorial. But if
+                                there is any mistake, please post the problem in contact form.</p>
+                            <div class="nexttopicdiv">
+                                <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a
+                                        href="what-is-robotics"></a></span>
+                            </div>
+
+                            <div id="bottomnext">
+                                <a style="float:right" class="next" href="what-is-robotics">next &rarr;</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <fieldset class="gra1">
+                <h2 class="h3">Learn Latest Tutorials</h2>
+                <div class="firsthomecontent">
+                    <a href="https://www.javatpoint.com/splunk">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/splunk.png"
+                                alt="Splunk tutorial" />
+                            <p>Splunk</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/spss">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial" />
+                            <p>SPSS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/swagger">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/swagger.png"
+                                alt="Swagger tutorial" />
+                            <p>Swagger</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/t-sql">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png"
+                                alt="T-SQL tutorial" />
+                            <p>Transact-SQL</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/tumblr">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/tumblr.png"
+                                alt="Tumblr tutorial" />
+                            <p>Tumblr</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/reactjs-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/react.png"
+                                alt="React tutorial" />
+                            <p>ReactJS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/regex">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/regex.png"
+                                alt="Regex tutorial" />
+                            <p>Regex</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/reinforcement-learning">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/react.png"
+                                alt="Reinforcement learning tutorial" />
+                            <p>Reinforcement Learning</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/r-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/r-programming.png"
+                                alt="R Programming tutorial" />
+                            <p>R Programming</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/rxjs">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial" />
+                            <p>RxJS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/react-native-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/react-native.png"
+                                alt="React Native tutorial" />
+                            <p>React Native</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/python-design-pattern">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png"
+                                alt="Python Design Patterns" />
+                            <p>Python Design Patterns</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/python-pillow">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png"
+                                alt="Python Pillow tutorial" />
+                            <p>Python Pillow</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/python-turtle-programming">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png"
+                                alt="Python Turtle tutorial" />
+                            <p>Python Turtle</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/keras">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/keras.png"
+                                alt="Keras tutorial" />
+                            <p>Keras</p>
+                        </div>
+                    </a>
+                </div>
+            </fieldset>
+            <hr class="hrhomebox" />
+
+            <fieldset class="gra1">
+                <h2 class="h3">Preparation</h2>
+                <div class="firsthomecontent">
+                    <a href="https://www.javatpoint.com/aptitude/quantitative">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png"
+                                alt="Aptitude" />
+                            <p>Aptitude</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/reasoning">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png"
+                                alt="Logical Reasoning" />
+                            <p>Reasoning</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/verbal-ability">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png"
+                                alt="Verbal Ability" />
+                            <p>Verbal Ability</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/interview-questions-and-answers">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/logo/interviewhome.png"
+                                alt="Interview Questions" />
+                            <p>Interview Questions</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/interview/images/company-home.jpeg"
+                                alt="Company Interview Questions" />
+                            <p>Company Questions</p>
+                        </div>
+                    </a>
+                </div>
+            </fieldset>
+            <hr class="hrhomebox" />
+
+            <fieldset class="gra1">
+                <h2 class="h3">Trending Technologies</h2>
+                <div class="firsthomecontent">
+                    <a href="https://www.javatpoint.com/artificial-intelligence-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png"
+                                alt="Artificial Intelligence Tutorial" />
+                            <p>Artificial Intelligence</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/aws-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png"
+                                alt="AWS Tutorial" />
+                            <p>AWS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/selenium-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/selenium.png"
+                                alt="Selenium tutorial" />
+                            <p>Selenium</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/cloud-computing-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png"
+                                alt="Cloud Computing tutorial" />
+                            <p>Cloud Computing</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/hadoop-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/hadoop.png"
+                                alt="Hadoop tutorial" />
+                            <p>Hadoop</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/reactjs-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/reactjs.png"
+                                alt="ReactJS Tutorial" />
+                            <p>ReactJS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/data-science">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/data-science.png"
+                                alt="Data Science Tutorial" />
+                            <p>Data Science</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/angular-7-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/angular7.png"
+                                alt="Angular 7 Tutorial" />
+                            <p>Angular 7</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/blockchain-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/blockchain.png"
+                                alt="Blockchain Tutorial" />
+                            <p>Blockchain</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/git">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial" />
+                            <p>Git</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/machine-learning">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png"
+                                alt="Machine Learning Tutorial" />
+                            <p>Machine Learning</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/devops">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/devops.png"
+                                alt="DevOps Tutorial" />
+                            <p>DevOps</p>
+                        </div>
+                    </a>
+                </div>
+            </fieldset>
+            <hr class="hrhomebox" />
+
+            <fieldset class="gra1">
+                <h2 class="h3">B.Tech / MCA</h2>
+                <div class="firsthomecontent">
+                    <a href="https://www.javatpoint.com/dbms-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial" />
+                            <p>DBMS</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/data-structure-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/data-structures.png"
+                                alt="Data Structures tutorial" />
+                            <p>Data Structures</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/daa-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial" />
+                            <p>DAA</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/os-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/operating-system.png"
+                                alt="Operating System tutorial" />
+                            <p>Operating System</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/computer-network-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/computer-network.png"
+                                alt="Computer Network tutorial" />
+                            <p>Computer Network</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/compiler-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png"
+                                alt="Compiler Design tutorial" />
+                            <p>Compiler Design</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png"
+                                alt="Computer Organization and Architecture" />
+                            <p>Computer Organization</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/discrete-mathematics-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png"
+                                alt="Discrete Mathematics Tutorial" />
+                            <p>Discrete Mathematics</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/ethical-hacking-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png"
+                                alt="Ethical Hacking Tutorial" />
+                            <p>Ethical Hacking</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/computer-graphics-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png"
+                                alt="Computer Graphics Tutorial" />
+                            <p>Computer Graphics</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/software-engineering-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png"
+                                alt="Software Engineering Tutorial" />
+                            <p>Software Engineering</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/html-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/web-technology.png"
+                                alt="html tutorial" />
+                            <p>Web Technology</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/cyber-security-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png"
+                                alt="Cyber Security tutorial" />
+                            <p>Cyber Security</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/automata-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/automata.png"
+                                alt="Automata Tutorial" />
+                            <p>Automata</p>
+                        </div>
+                    </a>
+                    <a href="https://www.javatpoint.com/c-programming-language-tutorial">
+                        <div class="homecontent"><img class="lazyload"
+                                data-src="https://static.javatpoint.com/images/homeicon/c-programming.png"
+                                alt="C Language tutorial" />
+                            <p>C Programming</p>
+                        </div>
+                    </a>
+
+
+
+
+                </div>
+            </fieldset>
+        </div>
+        <br><br />
+        <!-- <div class="mobilemenu" style="clear:both">
+                    <ins class="adPushupAds" data-adpControl="jrfe7" data-ver="2" data-siteId="37780"
+                        data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+                    <script data-cfasync="false"
+                        type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]) { if (k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1"); } } })(window, document);</script>
+                </div> -->
+        <!-- </div>
+            <div id="right">
+                <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad">
+                    <script>
+                        var adpushup = window.adpushup = window.adpushup || {};
+                        adpushup.que = adpushup.que || [];
+                        adpushup.que.push(function () {
+                            adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+                        });
+                    </script>
+                </div>
+                <br /><br />
+            </div> -->
+
+        <!-- <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;">
+
+                <ins class="adPushupAds" data-adpControl="6d5qg" data-ver="2" data-siteId="37780"
+                    data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+                <script data-cfasync="false"
+                    type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]) { if (k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1"); } } })(window, document);</script>
+                <br /><br />
+                <ins class="adPushupAds" data-adpControl="6d5qg" data-ver="2" data-siteId="37780"
+                    data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+                <script data-cfasync="false"
+                    type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]) { if (k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1"); } } })(window, document);</script>
+            </div>
+            <br /> -->
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <p class="grey-text text-lighten-4">All rights reserved
+                        content.</p>
+                    © 2014 Copyright Text
+                </div>
+                <div class="col l4 offset-l2 s12">
+
+                    <ul>
+
+                        <svg class="svg-icon" width="26" height="26" aria-hidden="true" role="img" focusable="false"
+                            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z">
+                            </path>
+                        </svg>
+
+
+                        <a href="https://twitter.com/CricRiffle?t=H00e4HngSgY-Rdqo1HJ-Iw&s=08"> <svg class="svg-icon"
+                                width="26" height="26" aria-hidden="true" role="img" focusable="false" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z">
+                                </path>
+                            </svg></a>
+
+                        <a href="https://instagram.com/bcci_.tv?utm_medium=copy_link"><svg class="svg-icon" width="26"
+                                height="26" aria-hidden="true" role="img" focusable="false" viewbox="0 0 24 24"
+                                version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z">
+                                </path>
+                            </svg></a>
+
+
+                        <a href="https://twitter.com/CricRiffle?t=H00e4HngSgY-Rdqo1HJ-Iw&s=08">
+                            <svg class="svg-icon" width="26" height="26" aria-hidden="true" role="img" focusable="false"
+                                viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path
+                                    d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z">
+                                </path>
+                            </svg>
+
+                            <a href="telegram.com"> <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                    fill="currentColor" class="bi bi-telegram" viewbox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                                </svg></a>
+
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright" style="background-color: black;">
+            <div class="container">
+                <div class="row">
+                    <div class="col l3 s12">
+                        <p>Sensors-module</p>
+                        <div class="#">
+
+                            <a href="#">Modules</a><br>
+                            <a href="#">Sensors</a><br>
+                            <a href="#">Display Devices</a><br>
+                            <a href="#">Oscilloscope and Signal Generator</a><br>
+                        </div>
+                    </div>
+                    <div class="col l3 s12">
+
+                        <p>Favourites</p>
+                        <div class="#">
+                            <p><a href="#">Aurduino</a><br> <a href="#">raspberry-pi</a><br> <a href="#"></a><br> <a
+                                    href="#">Seed Studio Boards and Modules </a><br> <a href="#">Beaglebone</a><br> <a
+                                    href="#">Development Board</a><br> <a href="#">M5 Stack Boards and Modules</a><br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col l3 s12">
+                        <p>Motors</p>
+                        <div class="#">
+                            <p><a href="#">stepper Motor</a><br> <a href="#">BLDC Motor</a><br> <a href="#">
+                                    Three Phase AC Induction Motors
+                                </a><br> <a href="#">
+                                    Switched Reluctance Motors (SRM)</a><br> <a href="#">
+                                    Permanent Magnet Synchronous Motor (PMSM)</a><br></p>
+                        </div>
+                    </div>
+                    <div class="col l3 s12">
+                        <p>Site Links</p>
+                        <div class="#">
+                            <ul id="#" class="menu">
+                                <li id="menu-item-1202"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202"><a
+                                        href="https://cricketaddictor.com/about-us/">About Us</a></li>
+                                <li id="menu-item-54831"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54831"><a
+                                        href="https://cricketaddictor.com/dmca/">DMCA</a></li>
+                                <li id="menu-item-54832"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54832"><a
+                                        href="https://cricketaddictor.com/disclaimer/">Disclaimer</a></li>
+                                <li id="menu-item-54833"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54833"><a
+                                        href="https://cricketaddictor.com/copyright-notice/">Copyright Notice</a></li>
+                                <li id="menu-item-54834"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-54834">
+                                    <a href="https://cricketaddictor.com/online-privacy-policy/">Privacy And Cookies
+                                        Policy</a>
+                                </li>
+                                <li id="menu-item-54867"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54867"><a
+                                        target="_blank" rel="noopener"
+                                        href="https://cricketaddictor.com/sitemap_index.xml">Sitemap</a></li>
+                                <li id="menu-item-1201"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1201"><a
+                                        href="https://cricketaddictor.com/contact/">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+
+        $(document).ready(function () {
+            $('.action').action();
+        });
+
+        $(document).ready(function () {
+            $('.reveal').reveal();
+        });
+
+        $(document).ready(function () {
+            $('.activator').activator();
+        });
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true
+        });
+    </script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+    <script> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+    <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>
+</body>
+
+</html>
